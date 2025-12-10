@@ -1,0 +1,157 @@
+<script type="module">
+import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+
+
+window.flowiseChatbot = Chatbot.initFull({
+    chatflowid: "df1789e9-19c6-475e-88f7-8a4a53262ed2",
+    apiHost: "https://cloud.flowiseai.com",
+
+    theme: {
+        button: {
+            backgroundColor: "#7a00ff",
+            right: 20,
+            bottom: 20,
+            size: 60,
+            iconColor: "#ffffff"
+        },
+
+        chatWindow: {
+            backgroundColor: "#0b0014",
+            height: "600px",
+            width: "420px",
+            borderRadius: "20px",
+            boxShadow: "0px 0px 20px rgba(120,0,255,0.5)"
+        },
+
+        header: {
+            backgroundColor: "#5d00b3",
+            title: "Exam Dude",    /* 🔥 Updated Title */
+            textColor: "#ffffff",
+            fontSize: "18px"
+        },
+
+        messageList: {
+            backgroundColor: "#0a0010"
+        },
+
+        userMessage: {
+            backgroundColor: "#7a00ff",
+            textColor: "#ffffff",
+            borderRadius: "14px"
+        },
+
+        botMessage: {
+            backgroundColor: "rgba(255,255,255,0.1)",
+            textColor: "#ffffff",
+            borderRadius: "14px"
+        },
+
+        inputBox: {
+            backgroundColor: "rgba(255,255,255,0.08)",
+            textColor: "#ffffff",
+            placeholderColor: "#bbbbbb",
+            borderColor: "#7a00ff",
+            borderWidth: "1px",
+            borderRadius: "12px"
+        },
+
+        sendButton: {
+            backgroundColor: "#8e2de2",
+            textColor: "#ffffff",
+            borderRadius: "10px"
+        }
+    }
+});
+</script>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Dude</title>
+    <link rel="icon" href="Screenshot 2025-12-10 124911.png">
+</head>
+<body>
+    <!-- 🌟 INTRO SCREEN -->
+<div id="intro-screen">
+    <div id="intro-title">Exam Dude</div>
+    <p style="font-size:18px; margin-top:10px; opacity:0.8;">AI Exam Mentor</p>
+</div>
+
+<!-- 🌟 MAIN CONTENT (Flowise Chat) -->
+<div id="main-content">
+
+    <flowise-fullchatbot></flowise-fullchatbot>
+
+</div>
+
+
+<style>
+    /* ----------------------------- */
+    /* GLOBAL STYLES */
+    /* ----------------------------- */
+    body {
+        margin: 0;
+        background: #0b0014;
+        font-family: "Inter", sans-serif;
+        overflow: hidden; /* Prevent scroll during intro */
+    }
+
+    /* ----------------------------- */
+    /* INTRO ANIMATION SCREEN */
+    /* ----------------------------- */
+    #intro-screen {
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%;
+        height: 100vh;
+        background: radial-gradient(circle at center, #7a00ff 0%, #0b0014 80%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: white;
+        font-size: 38px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        z-index: 9999;
+        animation: fadeOutScreen 3s ease forwards;
+        animation-delay: 1.8s;
+    }
+
+    /* Glow Animation */
+    @keyframes glowText {
+        0% { text-shadow: 0 0 10px #b366ff; opacity: 0.5; }
+        50% { text-shadow: 0 0 25px #d9b3ff; opacity: 1; }
+        100% { text-shadow: 0 0 10px #b366ff; opacity: 0.5; }
+    }
+
+    /* Screen Fade-out */
+    @keyframes fadeOutScreen {
+        0% { opacity: 1; }
+        100% { opacity: 0; visibility: hidden; }
+    }
+
+    #intro-title {
+        animation: glowText 2s infinite;
+    }
+
+    /* ----------------------------- */
+    /* MAIN CONTENT */
+    /* ----------------------------- */
+    #main-content {
+        opacity: 0;
+        animation: fadeInMain 1s ease forwards;
+        animation-delay: 2.5s; /* shows after intro ends */
+    }
+
+    @keyframes fadeInMain {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+</style>
+</body>
+</html>
