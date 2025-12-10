@@ -1,6 +1,8 @@
 🧠 EXAM DUDE – AI Exam Mentor
 AI-powered Important Question Generator for Anna University Students
 
+url of the web- https://varunraj03676.github.io/Exam_dude/ 
+
 EXAM DUDE is a simple demo AI exam assistant that helps students quickly get important questions based on the Anna University syllabus.
 The demo version supports 100 predictions only.
 
