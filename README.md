@@ -61,7 +61,7 @@ For unlimited usage, deploy your own Flowise instance or upgrade your plan.
 
 ⚙️ Setup Instructions
 1. Clone this repository
-git clone https://https://github.com/Varunraj03676/Exam-dude
+git clone https://github.com/Varunraj03676/Exam-dude.git
 
 2. Configure Flowise API URL
 
